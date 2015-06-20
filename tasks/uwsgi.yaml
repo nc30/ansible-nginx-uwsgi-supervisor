@@ -1,4 +1,8 @@
 ---
+- name: install gcc
+  apt: name=gcc state=present
+  sudo: yes
+
 - name: install uwsgi server
   pip: name=uwsgi virtualenv={{ uwsgi_venv }} version=2.0
   sudo: yes
